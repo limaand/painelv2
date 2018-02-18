@@ -12,6 +12,10 @@
     "express-session": "^1.15.6",
     "mysql": "^2.15.0"
   },
+
+  "engines": {
+    "node": "4.0.0"
+  },
   
   "scripts": {
     "start": "node index.js",
