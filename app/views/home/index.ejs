@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link href="css/style.css" rel="stylesheet" >
+<script src="bootstrap/js/bootstrap.min.js"></script>
+<script src="js/jquery-1.11.1.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="bootstrap/css/font-awesome.min.css">
+<head>
+<meta charset="UTF-8">
+<title>Painel Administrativo</title>
+</head>
+
+<body>
+<div class="container">
+  <div class="row">
+    
+
+  
+    <div class="login">
+
+      <% if(validar.length>0){%>
+      <div class="alert alert-danger" role="alert">
+          <strong>Atenção</strong>
+          <ul>
+         
+            <% for (var i=0;i<validar.length;i++){ %>
+                 <li>	<%= validar[i].msg%></li>
+             <%}%>
+          </ul>
+      </div>
+     
+   <% } %>    
+
+
+      <div class="login-triangle"></div>
+      <h2 class="login-header">Sistema v1.0</h2>
+      <form class="login-container" method="post" action="/autenticar">
+        <p>
+			<input  type="text" id="login" placeholder="login" name="login">
+        </p>
+   
+        <p>
+          <input type="password" id="senha" placeholder="Password" name="senha"> 
+        </p>
+        <p>
+          <input type="submit" value="Entrar">
+        </p>
+      </form>
+    </div>
+   </div>
+</div>
+</body>
+</html>
