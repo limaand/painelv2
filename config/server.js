@@ -7,7 +7,9 @@ var expressSession = require("express-session");
 var app = express();
 
 app.set('view engine', 'ejs');
-app.set('views', './app/views');
+//app.set('views', './app/views');
+
+app.set('views', path.join(__dirname, 'views'));
 
 /*midleware*/
 app.use(express.static('./app/public'));
@@ -28,8 +30,5 @@ consign()
   .then('app/models')
   .then('app/controllers')
   .into(app);
-
-
-
 
 module.exports = app;
