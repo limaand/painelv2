@@ -14,7 +14,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 
 /*midleware*/
-app.use(express.static('./app/public'));
+//app.use(express.static('./app/public'));
+app.use(express.static(path.join(__dirname, 'views')));
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(expressValidator());
