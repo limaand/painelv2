@@ -26,7 +26,8 @@ app.use(expressSession({
 }));
 
 /* todas as rotas*/
-consign()
+//consign()
+consign ({cwd:process.cwd()+"/app"})
   .include('app/routes').into(app)
   .then('config/dbConnection.js')
   .then('app/models')
