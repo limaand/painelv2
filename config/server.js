@@ -13,6 +13,7 @@ app.set('view engine', 'ejs');
 
 app.set('views', path.join(__dirname, '../app/views'));
 
+
 /*midleware*/
 app.use(express.static(path.join(__dirname,'../app/public')));
 
